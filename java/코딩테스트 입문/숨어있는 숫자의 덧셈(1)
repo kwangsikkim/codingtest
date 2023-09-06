@@ -1,0 +1,18 @@
+/* 프로그래머스 java 코딩테스트 입문 / 숨어있는 숫자의 덧셈(1) / https://school.programmers.co.kr/learn/courses/30/lessons/120851 */
+
+/*
+문제
+문자열 my_string이 매개변수로 주어집니다. 
+my_string안의 모든 자연수들의 합을 return하도록 solution 함수를 완성해주세요.
+*/
+
+class Solution {
+    public int solution(String my_string) {
+        String[] arr = my_string.replaceAll("[^0-9]","").split("");
+        int answer = 0;
+        for(int i=0; i<arr.length; i++){
+            answer += Integer.parseInt(arr[i]);
+        }
+        return answer;
+    }
+}
